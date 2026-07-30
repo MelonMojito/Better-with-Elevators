@@ -1,11 +1,11 @@
 {
 	"schemaVersion": 1,
-	"id": "examplemod",
+	"id": "betterwithelevators",
 	"version": "${version}",
-	"name": "Example Mod",
-	"description": "This mod aims to help new BTA modders.",
+	"name": "Better with Elevators",
+	"description": "Steel block elevators for BTA. Works on servers and in singleplayer.",
 	"authors": [
-		"Turnip Labs"
+		"MelonMojito"
 	],
 	"contact": {
 		"homepage": "",
@@ -16,16 +16,26 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"turniplabs.examplemod.ExampleMod"
+			"betterwithelevators.BetterWithElevators"
+		],
+		"initOptions": [
+			"betterwithelevators.client.BetterWithElevatorsClient"
+		],
+		"beforeClientStart": [
+			"betterwithelevators.client.BetterWithElevatorsClient"
+		],
+		"afterClientStart": [
+			"betterwithelevators.client.BetterWithElevatorsClient"
 		]
 	},
 	"mixins": [
-		"examplemod.mixins.json"
+		"betterwithelevators.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=${fabricloader}",
 		"minecraft": "*",
-		"java": ">=${java}"
+		"java": ">=${java}",
+		"halplibe": ">=${halplibe}"
 	},
 	"suggests": {
 		"modmenu": ">=${modmenu}"
