@@ -1,7 +1,7 @@
 package betterwithelevators.command;
 
 import betterwithelevators.config.ElevatorConfig;
-import betterwithelevators.util.Feedback;
+import melib.util.Feedback;
 import com.mojang.brigadier.Command;
 import net.minecraft.core.block.Block;
 import net.minecraft.core.entity.player.Player;
